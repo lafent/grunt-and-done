@@ -15,3 +15,9 @@ web host and get on with life.
 When trying to get setup, clone the repo, then just `npm install` to get the
 site started.  Finally run `grunt` to get the server up and running.
 
+Todo
+====
+
+#.  Improve documentation.
+#.  Notes about updating ga.js to use your google analytics codes.
+
