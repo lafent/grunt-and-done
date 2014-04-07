@@ -1,0 +1,35 @@
+{
+  "name": "grunt-and-done",
+  "version": "0.0.1",
+  "description": "grunt tasks for deploying a simple static website.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "jade",
+    "twitter-bootstrap",
+    "grunt",
+    "mobile",
+    "responsive",
+    "static-contents"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/lafent/grunt-and-done.git"
+  },
+  "author": "Lee Fent <lee.fent@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt-cli": "~0.1.9",
+    "grunt": "~0.4.1",
+    "grunt-contrib-less": "~0.7.0",
+    "grunt-contrib-jade": "~0.8.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-connect": "^0.7.1"
+  }
+}
