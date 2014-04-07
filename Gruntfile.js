@@ -18,20 +18,20 @@ module.exports = function(grunt) {
       },
       bootstrap: {
         src: [
-          'scripts/js/bootstrap/transition.js',
-          'scripts/js/bootstrap/alert.js',
-          'scripts/js/bootstrap/button.js',
-          'scripts/js/bootstrap/carousel.js',
-          'scripts/js/bootstrap/collapse.js',
-          'scripts/js/bootstrap/dropdown.js',
-          'scripts/js/bootstrap/modal.js',
-          'scripts/js/bootstrap/tooltip.js',
-          'scripts/js/bootstrap/popover.js',
-          'scripts/js/bootstrap/scrollspy.js',
-          'scripts/js/bootstrap/tab.js',
-          'scripts/js/bootstrap/affix.js'
+          'scripts/js/vendor/bootstrap/transition.js',
+          'scripts/js/vendor/bootstrap/alert.js',
+          'scripts/js/vendor/bootstrap/button.js',
+          'scripts/js/vendor/bootstrap/carousel.js',
+          'scripts/js/vendor/bootstrap/collapse.js',
+          'scripts/js/vendor/bootstrap/dropdown.js',
+          'scripts/js/vendor/bootstrap/modal.js',
+          'scripts/js/vendor/bootstrap/tooltip.js',
+          'scripts/js/vendor/bootstrap/popover.js',
+          'scripts/js/vendor/bootstrap/scrollspy.js',
+          'scripts/js/vendor/bootstrap/tab.js',
+          'scripts/js/vendor/bootstrap/affix.js'
         ],
-        dest: 'www/js/bootstrap.js'
+        dest: 'www/js/vendor/bootstrap.js'
       }
     },
     uglify: {
@@ -40,7 +40,7 @@ module.exports = function(grunt) {
       },
       bootstrap: {
         src: ['<%= concat.bootstrap.dest %>'],
-        dest: 'www/js/bootstrap.min.js'
+        dest: 'www/js/vendor/bootstrap.min.js'
       }
     },
     jade: {
@@ -96,7 +96,7 @@ module.exports = function(grunt) {
     less: { 
       dev: {
         files: {
-          "www/css/bootstrap.css": "styles/less/bootstrap/bootstrap.less",
+          "www/css/vendor/bootstrap.css": "styles/less/vendor/bootstrap/bootstrap.less",
           "www/css/main.css": "styles/less/main.less"
         }
       },
@@ -105,7 +105,7 @@ module.exports = function(grunt) {
           yuicompress: true
         },
         files: {
-          "www/css/bootstrap.css": "styles/less/bootstrap/bootstrap.less",
+          "www/css/bootstrap.css": "styles/less/vendor/bootstrap/bootstrap.less",
           "www/css/main.css": "styles/less/main.less"
         }
       }
@@ -116,8 +116,8 @@ module.exports = function(grunt) {
           {
             expand: true, 
             flatten: true, 
-            src: ['scripts/js/jquery-1.10.2.min.js'], 
-            dest: 'www/js/'
+            src: ['scripts/js/vendor/*.js'], 
+            dest: 'www/js/vendor/'
           },
           {
             expand: true, 
@@ -128,8 +128,8 @@ module.exports = function(grunt) {
           {
             expand: true, 
             flatten: true, 
-            src: ['scripts/js/*.map'], 
-            dest: 'www/js/'
+            src: ['scripts/js/vendor/*.map'], 
+            dest: 'www/js/vendor/'
           },
         ]
       },
@@ -138,8 +138,8 @@ module.exports = function(grunt) {
           {
             expand: true, 
             flatten: true, 
-            src: ['scripts/js/jquery-1.10.2.min.js'], 
-            dest: 'www/js/'
+            src: ['scripts/js/vendor/*.js'], 
+            dest: 'www/js/vendor/'
           },
           {
             expand: true, 
@@ -150,8 +150,8 @@ module.exports = function(grunt) {
           {
             expand: true, 
             flatten: true, 
-            src: ['scripts/js/*.map'], 
-            dest: 'www/js/'
+            src: ['scripts/js/vendor/*.map'], 
+            dest: 'www/js/vendor/'
           },
           {
             expand: true, 
