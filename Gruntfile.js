@@ -43,6 +43,17 @@ module.exports = function(grunt) {
         dest: 'www/js/vendor/bootstrap.min.js'
       }
     },
+    // configure jshint to validate js files -----------------------------------
+    jshint: {
+      /*
+      options: {
+        reporter: require('jshint-stylish') // use jshint-stylish to make our errors look and read good
+      },
+      */
+
+      // when this task is run, lint the Gruntfile and all js files in src
+      build: ['Gruntfile.js', 'scripts/js/*.js']
+    },
     jade: {
       dev: {
         options: {
@@ -170,14 +181,15 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-jade');
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-jade');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('default', [
     'clean', 
