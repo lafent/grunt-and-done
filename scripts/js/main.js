@@ -4,7 +4,10 @@
  */
 // Used to selectively highlight the "active" menu item from the list below.
 $(document).ready(function() {
+  // Activate Tablesorter on targetted tables
   $("table.table-sortable").tablesorter();
+
+  // Setup a simple tweak to auto-activate the top menu.
   var locationMap = {
     'index': 'home',
     'about': 'about',
