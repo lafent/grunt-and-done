@@ -1,0 +1,37 @@
+doctype html
+html(lang="en")
+head
+  meta(charset="utf-8")
+  meta( name="viewport", content="width=device-width, initial-scale=1.0")
+  link(href="css/vendor/bootstrap.css", rel="stylesheet", type="text/css")
+  link(href="css/main.css", rel="stylesheet", type="text/css")
+  block head
+
+body
+  div(class="navbar navbar-inverse navbar-fixed-top")
+    div(class="container")
+      div(class="navbar-header")
+        button(type="button", class="navbar-toggle", data-toggle="collapse", data-target=".navbar-collapse")
+          span(class="icon-bar")
+          span(class="icon-bar")
+          span(class="icon-bar")
+
+        a(class="navbar-brand", href="/") {{ site }}
+
+      div(class="navbar-collapse collapse")
+        ul(class="nav navbar-nav")
+          li(id="about")
+            a(href="about.html") About
+          li(id="contact")
+            a(href="contact.html") Contact
+
+  block content
+
+  block footer
+
+  script(src="js/vendor/jquery.js")
+  script(src="js/vendor/jquery.tablesorter.js")
+  script(src="js/vendor/bootstrap.js")
+  script(src="js/vendor/ga.js")
+  script(src="js/main.js")
+

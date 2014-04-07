@@ -1,0 +1,43 @@
+extend ../includes/base
+
+block head
+  title Home
+
+block content
+  div(class="jumbotron")
+    div(class="container")
+      h1 Welcome to {{ My New Site }}!
+      p.
+        A website about something really interesting!
+      p
+        a(class="btn btn-primary btn-lg", href="/contact.html").
+          Contact Us &raquo;
+
+  div(class="container")
+    div(class="row")
+      div(class="col-lg-4")
+        h2 About
+        p.
+          A glimpse of what we're all about!
+        p
+          a(class="btn btn-default", href="/about.html") About &raquo;
+
+      div(class="col-lg-4")
+        h2 Contact
+        p.
+          A website about something really interesting!
+        p
+          a(class="btn btn-default", href="/contact.html") Contact &raquo;
+      
+      div(class="col-lg-4")
+        h2 About
+        p.
+          A glimpse of what we're all about!
+        p
+          a(class="btn btn-default", href="/about.html") About &raquo;
+
+    hr
+    
+    footer
+      p &copy; {{ Site Owner }} 2014
+
