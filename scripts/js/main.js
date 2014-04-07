@@ -16,7 +16,7 @@ $(document).ready(function() {
   var currentLocation = window.location.href.split('/');
   var currentPage = currentLocation[currentLocation.length-1];
   var loc = currentPage.split('.html')[0];
-  if (loc == '') {
+  if (loc === '') {
     loc = 'index';
   }
   var element = $('li#' + locationMap[loc]);

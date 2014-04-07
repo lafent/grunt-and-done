@@ -44,6 +44,9 @@ module.exports = function(grunt) {
       }
     },
     jshint: {
+      options: {
+        reporter: require('jshint-stylish')
+      },
       // for now we don't jshint the scripts in vendor.
       build: ['scripts/js/*.js']
     },
