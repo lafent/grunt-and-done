@@ -43,16 +43,9 @@ module.exports = function(grunt) {
         dest: 'www/js/vendor/bootstrap.min.js'
       }
     },
-    // configure jshint to validate js files -----------------------------------
     jshint: {
-      /*
-      options: {
-        reporter: require('jshint-stylish') // use jshint-stylish to make our errors look and read good
-      },
-      */
-
-      // when this task is run, lint the Gruntfile and all js files in src
-      build: ['Gruntfile.js', 'scripts/js/*.js']
+      // for now we don't jshint the scripts in vendor.
+      build: ['scripts/js/*.js']
     },
     jade: {
       dev: {
