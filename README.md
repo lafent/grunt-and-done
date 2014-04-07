@@ -18,17 +18,17 @@ web host and get on with life.
 Getting Started
 ===============
 
-#.  Clone this repo.
-#.  Run `npm install`
-#.  Run `grunt` 
-#.  Point your browser to http://localhost:3456/ to view your website.
+1.  Clone this repo.
+2.  Run `npm install`
+3.  Run `grunt` 
+4.  Point your browser to http://localhost:3456/ to view your website.
 
 Todo
 ====
 
-#.  Improve documentation.
-#.  Setup production tasks in grunt, including uglify and concat tasks.
-#.  Look at other grunt tasks that can be inlined.
+1.  Improve documentation.
+2.  Setup production tasks in grunt, including uglify and concat tasks.
+3.  Look at other grunt tasks that can be inlined.
 
 Reminder
 ========
