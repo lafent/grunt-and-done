@@ -9,7 +9,7 @@ This is just a setup for building a static site using:
 *   Node.js
 *   Jade Templates
 *   Twitter Bootstrap v3
-*   jQuery and jQuery.tablesorter
+*   jQuery and jQuery Tablesorter
 *   Google Analytics
 
 After you run the default grunt task you can ship the www directory to your 
@@ -18,11 +18,16 @@ web host and get on with life.
 Getting Started
 ===============
 
-1.  Clone this repo.
-2.  Run `npm install`
-3.  Run `grunt` 
-4.  Point your browser to [http://localhost:3456/](http://localhost:3456/) to
-    view your website.
+You'll need [git](http://git-scm.com/), [node.js](http://nodejs.org/), and an
+internet connection to get things rolling.
+
+1.  `git clone https://github.com/lafent/grunt-and-done.git`
+2.  `cd grunt-and-done`
+2.  `npm install`
+3.  `grunt` 
+
+Now point your browser to [http://localhost:3456/](http://localhost:3456/) and
+view your website.
 
 Todo
 ====
