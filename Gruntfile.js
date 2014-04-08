@@ -13,35 +13,27 @@ module.exports = function(grunt) {
     },
     concat: {
       options: {
-        banner: '<%= banner %><%= jqueryCheck %>',
         stripBanners: false
       },
       bootstrap: {
-        src: [
-          'scripts/js/vendor/bootstrap/transition.js',
-          'scripts/js/vendor/bootstrap/alert.js',
-          'scripts/js/vendor/bootstrap/button.js',
-          'scripts/js/vendor/bootstrap/carousel.js',
-          'scripts/js/vendor/bootstrap/collapse.js',
-          'scripts/js/vendor/bootstrap/dropdown.js',
-          'scripts/js/vendor/bootstrap/modal.js',
-          'scripts/js/vendor/bootstrap/tooltip.js',
-          'scripts/js/vendor/bootstrap/popover.js',
-          'scripts/js/vendor/bootstrap/scrollspy.js',
-          'scripts/js/vendor/bootstrap/tab.js',
-          'scripts/js/vendor/bootstrap/affix.js'
-        ],
+        src: ['scripts/js/vendor/bootstrap/*.js'],
         dest: 'www/js/vendor/bootstrap.js'
       }
     },
     uglify: {
       options: {
-        banner: '<%= banner %>'
+        banner: '/* <%= pkg.name %> v<%= pkg.version %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
       },
-      bootstrap: {
-        src: ['<%= concat.bootstrap.dest %>'],
-        dest: 'www/js/vendor/bootstrap.min.js'
-      }
+      build: {
+        files: {
+          'www/js/main.min.js': 'scripts/js/main.js',
+          'www/js/vendor/ga.min.js': 'scripts/js/vendor/ga.js',
+          'www/js/vendor/jquery.min.js': 'scripts/js/vendor/jquery.js',
+          'www/js/vendor/jquery.tablesorter.min.js': 'scripts/js/vendor/jquery.tablesorter.js',
+          /* This one we pull after the concat has fired off */
+          'www/js/vendor/bootstrap.min.js': '<%= concat.bootstrap.dest %>'
+        }
+      }      
     },
     jshint: {
       options: {
@@ -102,6 +94,9 @@ module.exports = function(grunt) {
     },
     less: { 
       dev: {
+        options: {
+          banner: '/* <%= pkg.name %> v<%= pkg.version %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+        },
         files: {
           "www/css/vendor/bootstrap.css": "styles/less/vendor/bootstrap/bootstrap.less",
           "www/css/main.css": "styles/less/main.less"
@@ -109,11 +104,12 @@ module.exports = function(grunt) {
       },
       dist: {
         options: {
-          yuicompress: true
+          yuicompress: true,
+          banner: '/* <%= pkg.name %> v<%= pkg.version %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
         },
         files: {
-          "www/css/bootstrap.css": "styles/less/vendor/bootstrap/bootstrap.less",
-          "www/css/main.css": "styles/less/main.less"
+          "www/css/vendor/bootstrap.min.css": "styles/less/vendor/bootstrap/bootstrap.less",
+          "www/css/main.min.css": "styles/less/main.less"
         }
       }
     },
@@ -187,13 +183,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('default', [
-    'clean', 
-    'copy',
-    'concat',
-    'jade:dev',
-    'less:dev',
-    'connect',
-    'watch'
-  ]);
+  grunt.registerTask('default', 
+    ['clean', 'copy', 'concat', 'jade:dev', 'less:dev', 'connect', 'watch']
+  );
+
+  grunt.registerTask('dist', 
+    ['clean', 'copy', 'concat', 'jade', 'less']
+  );
+
 };
