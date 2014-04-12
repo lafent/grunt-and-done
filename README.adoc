@@ -1,0 +1,43 @@
+= grunt-and-done
+
+A scaffold for getting rolling with Jade, Twitter Bootstrap and Grunt.
+
+This is just a setup for building a static site using:
+
+*   Grunt Tasks
+*   Node.js
+*   Jade Templates
+*   Twitter Bootstrap v3
+*   jQuery and jQuery Tablesorter
+*   Google Analytics
+
+After you run the default grunt task you can ship the www directory to your 
+web host and get on with life.  
+
+== Getting Started
+
+You'll need http://git-scm.com/[git], http://nodejs.org/[node.js], and an
+internet connection to get things rolling.
+
+. `git clone https://github.com/lafent/grunt-and-done.git`
+. `cd grunt-and-done`
+. `npm install`
+. `grunt` 
+
+Now point your browser to http://localhost:3456/[http://localhost:3456/] and
+view your website.
+
+== Todo
+
+. Improve documentation.
+. [line-through]*Setup production tasks in grunt, including uglify and concat 
+  tasks.*
+. Look at other grunt tasks that can be inlined.
+. Look at usemin to handle configuring use of minified versions.
+. Add other examples from the bootstrap examples page.
+. Consider other basic libraries to add to the base. *Be critical of utility*
+
+== Reminder
+
+Please update the ga.js file to include the correct account code.
+
