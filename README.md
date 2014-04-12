@@ -36,6 +36,8 @@ Todo
 2.  ~~Setup production tasks in grunt, including uglify and concat tasks.~~
 3.  Look at other grunt tasks that can be inlined.
 4.  Look at usemin to handle configuring use of minified versions.
+5.  Add other examples from the bootstrap examples page.
+6.  Consider other basic libraries to add to the base. *Be critical of utility*
 
 Reminder
 ========
