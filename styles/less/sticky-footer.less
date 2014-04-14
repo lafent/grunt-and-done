@@ -1,13 +1,17 @@
 /* Sticky footer styles
--------------------------------------------------- */
+---------------------------------------------------------------------------- */
 html {
   position: relative;
   min-height: 100%;
 }
 
+/* Margin bottom by footer height */
 body {
-  /* Margin bottom by footer height */
   margin-bottom: 60px;
+
+  >.container {
+    padding: 60px 15px 0;
+  }
 }
 
 #footer {
@@ -17,27 +21,23 @@ body {
   /* Set the fixed height of the footer here */
   height: 60px;
   background-color: #f5f5f5;
+
+  >.container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 }
 
 /* Custom page CSS
--------------------------------------------------- */
+---------------------------------------------------------------------------- */
 /* Not required for template or sticky footer method. */
-
-body > .container {
-  padding: 60px 15px 0;
-}
-
-.container .text-muted {
-  margin: 20px 0;
-}
-
-#footer > .container {
-  padding-right: 15px;
-  padding-left: 15px;
+.container {
+  .text-muted {
+    margin: 20px 0;
+  }
 }
 
 code {
   font-size: 80%;
 }
-
 
