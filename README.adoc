@@ -19,6 +19,9 @@ web host and get on with life.
 You'll need http://git-scm.com/[git], http://nodejs.org/[node.js], and an
 internet connection to get things rolling.
 
+*NOTE* The examples provided are derived from the Twitter Bootstrap website
+and are representative of their work and effort, not mine.
+
 . `git clone https://github.com/lafent/grunt-and-done.git`
 . `cd grunt-and-done`
 . `npm install`

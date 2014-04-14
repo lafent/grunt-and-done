@@ -99,7 +99,8 @@ module.exports = function(grunt) {
         },
         files: {
           "www/css/vendor/bootstrap.css": "styles/less/vendor/bootstrap/bootstrap.less",
-          "www/css/main.css": "styles/less/main.less"
+          "www/css/main.css": "styles/less/main.less",
+          "www/css/sticky-footer.css": "styles/less/sticky-footer.less"
         }
       },
       dist: {
