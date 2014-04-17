@@ -1,45 +1,20 @@
 extend ../includes/base
 
 block head
-  title Example 2
+  title Example 2 - Blog
+  link(href="css/blog.css", rel="stylesheet", type="text/css")
 
 block content
-  div(class="jumbotron")
-    div(class="container")
-      h1 Welcome to {{ My New Site }}!
-      p.
-        A website about something really interesting!
-      p
-        a(class="btn btn-primary btn-lg", href="/contact.html").
-          Contact Us &raquo;
-
   div(class="container")
     div(class="row")
-      div(class="col-lg-4")
-        h2 About
+      div(class="col-lg-12")
+        h2 Example 1 - Sticky Footer
         p.
-          A glimpse of what we're all about!
-        p
-          a(class="btn btn-default", href="/example-1.html") Example 1 &raquo;
-
-      div(class="col-lg-4")
-        h2 Contact
-        p.
-          A website about something really interesting!
-        p
-          a(class="btn btn-default", href="/example-2.html") Example 2 &raquo;
-
-      div(class="col-lg-4")
-        h2 About
-        p.
-          A glimpse of what we're all about!
-        p
-          a(class="btn btn-default", href="/example-3.html") Example 3 &raquo;
+          A glimpse of what we're all about!  Look down for the sticky footer
+          at the bottom.
 
     hr
 
     footer
       p &copy; {{ Site Owner }} 2014
-
-
 
