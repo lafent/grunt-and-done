@@ -136,6 +136,12 @@ module.exports = function(grunt) {
             src: ['scripts/js/vendor/*.map'], 
             dest: 'www/js/vendor/'
           },
+          {
+            expand: false,
+            flatten: false,
+            src: ['fonts/*'],
+            dest: 'www/css/'
+          }
         ]
       },
       main: {
